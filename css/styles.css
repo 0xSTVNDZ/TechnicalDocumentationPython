@@ -2,4 +2,146 @@ body {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Heebo', sans-serif;
+    color: black;
+    background-color: #fcf5e1;
+    display: inline-flex;
+    width: 100%;
+    top: 0;
+    margin: 0px 0px;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 17.2em;
+    position: fixed;
+}
+
+#navbar header {
+    height: 2em;
+    font-size: 1.75em;
+}
+
+#navbar li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    padding: 1.5em 0em;
+    max-height: 29px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+#main-doc {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-left: 275px;
+    height: 2000px;
+}
+
+.main-section {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-left: 3px solid black;
+
+}
+
+header {
+    font-weight: 700;
+}
+
+.op-table {
+    display: inline-flex;
+    width: auto;
+    max-width: 60%;
+    justify-content: space-around;
+}
+
+.operators {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.operators p {
+    width: 100%;
+}
+
+.operation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.operation p {
+    width: 100%;
+}
+
+.example {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.example code{
+    width: 100%;
+}
+
+.compare-table {
+    display: inline-flex;
+    max-width: 60%;
+    width: auto;
+    justify-content: space-around;
+}
+
+.comp-operators {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.comp-operators p {
+    width: 100%;
+}
+
+.comp-meaning {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.comp-meaning p {
+    width: 100%;
+}
+
+/*
+    use at least one media query
+*/
+@media screen and (max-width: 1080px) {
+    /*
+        need to figure out how to make text disappear in
+        nav bar
+    */
+    body {
+        background-color: black;
+        color: #fcf5e1;
+    }
+
+    #main-doc {
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        width: 85%;
+        margin-left: 0px;
+        height: 2000px;
+    }
 }

@@ -9,10 +9,124 @@
     </head>
 
     <body>
-        <h1>Hello World</h1>
+        <!--nav bar, css will make it align on the left of the page-->
+        <!--each nav link will be a topic discussed in the documentation-->
+        <nav id="navbar">
+            <header>Python Doc</header>
+            <!--fill in 'topic'-->
+            <li><a href="#math_operators" class="nav-link">Math Operators</a></li>
+            <li><a href="#data_types" class="nav-link">Data Types</a></li>
+            <li><a href="#variables" class="nav-link">Variables</a></li>
+            <li><a href="#comments" class="nav-link">Comments</a></li>
+            <li><a href="#flow_control" class="nav-link">Flow Control</a></li>
+            <!--<li><a href="#topic">Topic</a></li>-->
+        </nav>
+
+        <!--main documentation-->
+        <main id="main-doc">
+            <!--separate each topic with section elements and group them with same class attr-->
+            <!--
+                5 li elements
+            -->
+            <section class="main-section" id="math_operators">
+                <header>Math Operators</header>
+                <div class="op-table">
+                    <div class="operators">
+                        <h3>Operators</h3>
+                        <p>**</p>
+                        <p>%</p>
+                        <p>//</p>
+                        <p>/</p>
+                        <p>*</p>
+                        <p>-</p>
+                        <p>+</p>
+                    </div>
+                    <div class="operation">
+                        <h3>Operation</h3>
+                        <p>Exponent</p>
+                        <p>Modulus/Remainder</p>
+                        <p>Integer Division</p>
+                        <p>Division</p>
+                        <p>Multiplication</p>
+                        <p>Subtraction</p>
+                        <p>Addition</p>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <code>2 ** 3 = 8</code>
+                        <code>22 % 8 = 6</code>
+                        <code>22 // 8 = 2</code>
+                        <code>22 / 8 = 2.75</code>
+                        <code>3 * 3 = 9</code>
+                        <code>5 - 2 = 3</code>
+                        <code>2 + 2 = 4</code>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="data_types">
+                <header>Data Types</header>
+                <ul>
+                    <li>Integers</li>
+                    <li>Floating-point numbers</li>
+                    <li>Strings</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <p>You can name a variable anything as long as it obeys the following rules:</p>
+                <ol>
+                    <li>It can be only one word.</li>
+                    <li>It can use only letters, numbers and the underscore _ character.</li>
+                    <li>It can't begin with a number.</li>
+                    <li>Variable name starting with an underscore _ are considered as "unuseful".</li>
+                </ol>
+            </section>
+
+            <section class="main-section" id="comments">
+                <header>Comments</header>
+                <p>Single line comment:</p>
+                <code># This is a comment</code>
+                <p>Multiline comment:</p>
+                <code>
+                    # This is a <br>
+                    # multiline comment.
+                </code>
+                <p>Function docstring:</p>
+                <code>
+                    """<br>
+                    This is a function docstring <br>
+                    Can also use '''<br>
+                    """
+                </code>
+            </section>
+
+            <section class="main-section" id="flow_control">
+                <header>Flow Control</header>
+                <div class="compare-table">
+                    <div class="comp-operators">
+                        <h3>Operators</h3>
+                        <p>==</p>
+                        <p>!=</p>
+                        <p><</p>
+                        <p>></p>
+                        <p><=</p>
+                        <p>>=</p>
+                    </div>
+                    <div class="comp-meaning">
+                        <h3>Meaning</h3>
+                        <p>Equal to</p>
+                        <p>Not equal to</p>
+                        <p>Less than</p>
+                        <p>Greater than</p>
+                        <p>Less than or equal to</p>
+                        <p>Greater than or equal to</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 
-    <footer>
-
-    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
