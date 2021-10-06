@@ -124,13 +124,10 @@ header {
 }
 
 /*
-    use at least one media query
+    remove navbar if width under 1080px
+    invert colors
 */
 @media screen and (max-width: 1080px) {
-    /*
-        need to figure out how to make text disappear in
-        nav bar
-    */
     body {
         background-color: black;
         color: #fcf5e1;
@@ -143,5 +140,10 @@ header {
         width: 85%;
         margin-left: 0px;
         height: 2000px;
+        z-index: 1;
+    }
+
+    #navbar {
+        z-index: 0;
     }
 }
