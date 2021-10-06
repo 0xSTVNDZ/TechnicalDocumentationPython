@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Technical Documentation Page for Python
 
-<!--[Demo](https://example.com)-->
+[Demo](https://0xstvndz.github.io/TechnicalDocumentationPython/)
 
 ### Built With
 
@@ -25,7 +25,7 @@ git clone 'repository' & open index.html || Use demo link
 
 
 ## Project Status
-Project is: _inprogress_ 
+Project is: _complete_ 
 
 
 ## Room for Improvement
