@@ -1,3 +1,9 @@
+/*
+    set font properties
+    set forground and background colors
+    create a flex container
+    set width, top and margins
+*/
 body {
     font-size: 16px;
     font-weight: 400;
@@ -10,6 +16,12 @@ body {
     margin: 0px 0px;
 }
 
+/*
+    set to flex container
+    set constant width
+    center content horizontally
+    fixed position
+*/
 #navbar {
     display: flex;
     flex-wrap: wrap;
@@ -18,114 +30,127 @@ body {
     position: fixed;
 }
 
+/*
+    set font size, color
+    set height
+*/
 #navbar header {
     height: 2em;
     font-size: 1.75em;
+    color: #9f0dc3;
+    
 }
 
+/*
+    set width to 100% for items to wrap in container
+    set to flex container, set top border
+    set padding and max height of each list element
+*/
 #navbar li {
     width: 100%;
     display: flex;
     justify-content: center;
     border-top: 1px solid black;
-    padding: 1.5em 0em;
+    padding: 1em 0em;
     max-height: 29px;
 }
 
+/*
+    remove underline for link text
+    set color
+    set font size
+*/
 #navbar a {
     text-decoration: none;
     color: black;
     font-size: 1.5em;
 }
 
+/*
+    main body of site
+    set to flex container, align content to the top 
+    of container
+    set width of container
+    offset section 275px to the right to account for the
+    nav bar
+*/
 #main-doc {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    width: 85%;
+    width: 87%;
     margin-left: 275px;
-    height: 2000px;
 }
 
+/*
+    each section of the body
+    set width to 100%
+    add padding
+    add left, right and bottom borders
+*/
 .main-section {
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid black;
     border-left: 3px solid black;
-
+    border-right: 3px solid black;
 }
 
-header {
-    font-weight: 700;
-}
-
-.op-table {
-    display: inline-flex;
-    width: auto;
-    max-width: 60%;
-    justify-content: space-around;
-}
-
-.operators {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-}
-
-.operators p {
-    width: 100%;
-}
-
-.operation {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-}
-
-.operation p {
-    width: 100%;
-}
-
-.example {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-}
-
-.example code{
-    width: 100%;
-}
-
-.compare-table {
-    display: inline-flex;
-    max-width: 60%;
-    width: auto;
-    justify-content: space-around;
-}
-
-.comp-operators {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-}
-
-.comp-operators p {
-    width: 100%;
-}
-
-.comp-meaning {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-}
-
-.comp-meaning p {
-    width: 100%;
+li.ref {
+    margin-left: 2em;
+    padding: 2em;
 }
 
 /*
-    remove navbar if width under 1080px
+    set header font weight
+    set font size
+*/
+header {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/*section 1, css for 3 column table format of info*/
+.three_col_tab {
+    display: inline-flex;
+    width: auto;
+    max-width: 60%;
+    justify-content: space-around;
+}
+
+/*section 5, css for 2 column table format of info*/
+.two_col_tab {
+    display: inline-flex;
+    max-width: 60%;
+    width: auto;
+    justify-content: space-around;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.col p {
+    width: 100%;
+}
+
+.col code {
+    width: 100%;
+    padding: 10px;
+}
+
+.ref a {
+    color: green;
+    text-decoration: none;
+}
+
+/*
+    if width under 1080px:
+    remove navbar, give z-index to main and navbar 
     invert colors
+    should have fixed title at top
 */
 @media screen and (max-width: 1080px) {
     body {
@@ -137,7 +162,7 @@ header {
         display: flex;
         align-content: flex-start;
         flex-wrap: wrap;
-        width: 85%;
+        width: 100%;
         margin-left: 0px;
         height: 2000px;
         z-index: 1;
@@ -145,5 +170,17 @@ header {
 
     #navbar {
         z-index: 0;
+    }
+
+    #navbar header {
+        color: black;
+    }
+
+    .main-section {
+        border-bottom: 1px solid #fcf5e1;
+    }
+
+    .ref a {
+        color: #00e3ef;
     }
 }

@@ -22,6 +22,8 @@ git clone 'repository' & open index.html || Use demo link
 ## Features
 - Documentation for Python language
 - Vertical navigational bar
+- Media query to invert colors on mobile devices
+- Scalable CSS
 
 
 ## Project Status
@@ -31,8 +33,6 @@ Project is: _complete_
 ## Room for Improvement
 - Add more documentation
 
-To do:
-- start
 
 <!-- CONTRIBUTING -->
 ## Contributing

@@ -12,26 +12,27 @@
         <!--nav bar, css will make it align on the left of the page-->
         <!--each nav link will be a topic discussed in the documentation-->
         <nav id="navbar">
-            <header>Python Doc</header>
+            <header>Python Docs</header>
             <!--fill in 'topic'-->
             <li><a href="#math_operators" class="nav-link">Math Operators</a></li>
             <li><a href="#data_types" class="nav-link">Data Types</a></li>
             <li><a href="#variables" class="nav-link">Variables</a></li>
             <li><a href="#comments" class="nav-link">Comments</a></li>
             <li><a href="#flow_control" class="nav-link">Flow Control</a></li>
+            <li><a href="#boolean_operators">Boolean Operators</a></li>
+            <li><a href="#if_statements">If_statements</a></li>
+            <li><a href="#loops">Loops</a></li>
+            <li><a href="#reference">Reference</a></li>
             <!--<li><a href="#topic">Topic</a></li>-->
         </nav>
 
         <!--main documentation-->
         <main id="main-doc">
             <!--separate each topic with section elements and group them with same class attr-->
-            <!--
-                5 li elements
-            -->
             <section class="main-section" id="math_operators">
                 <header>Math Operators</header>
-                <div class="op-table">
-                    <div class="operators">
+                <div class="three_col_tab">
+                    <div class="col">
                         <h3>Operators</h3>
                         <p>**</p>
                         <p>%</p>
@@ -41,7 +42,7 @@
                         <p>-</p>
                         <p>+</p>
                     </div>
-                    <div class="operation">
+                    <div class="col">
                         <h3>Operation</h3>
                         <p>Exponent</p>
                         <p>Modulus/Remainder</p>
@@ -51,7 +52,7 @@
                         <p>Subtraction</p>
                         <p>Addition</p>
                     </div>
-                    <div class="example">
+                    <div class="col">
                         <h3>Example</h3>
                         <code>2 ** 3 = 8</code>
                         <code>22 % 8 = 6</code>
@@ -104,8 +105,8 @@
 
             <section class="main-section" id="flow_control">
                 <header>Flow Control</header>
-                <div class="compare-table">
-                    <div class="comp-operators">
+                <div class="two_col_tab">
+                    <div class="col">
                         <h3>Operators</h3>
                         <p>==</p>
                         <p>!=</p>
@@ -114,7 +115,7 @@
                         <p><=</p>
                         <p>>=</p>
                     </div>
-                    <div class="comp-meaning">
+                    <div class="col">
                         <h3>Meaning</h3>
                         <p>Equal to</p>
                         <p>Not equal to</p>
@@ -125,6 +126,103 @@
                     </div>
                 </div>
             </section>
+
+            <section class="main-section" id="boolean_operators">
+                <header>Boolean Operators</header>
+                <p>There are three Boolean operators: and, or and not.</p>
+                <p>The <i>and</i> Operator's Truth Table:</p>
+                <div class="two_col_tab">
+                    <div class="col">
+                        <h3>Expression</h3>
+                        <code>True and True</code>
+                        <code>True and False</code>
+                        <code>False and True</code>
+                        <code>False and False</code>
+                    </div>
+                    <div class="col">
+                        <h3>Evaluates to</h3>
+                        <code>True</code>
+                        <code>False</code>
+                        <code>False</code>
+                        <code>False</code>
+                    </div>
+                </div>
+
+                <p>The <i>or</i> Operator's Truth Table:</p>
+                <div class="two_col_tab">
+                    <div class="col">
+                        <h3>Expression</h3>
+                        <code>True and True</code>
+                        <code>True and False</code>
+                        <code>False and True</code>
+                        <code>False and False</code>
+                    </div>
+                    <div class="col">
+                        <h3>Evaluates to</h3>
+                        <code>True</code>
+                        <code>True</code>
+                        <code>True</code>
+                        <code>False</code>
+                    </div>
+                </div>
+
+                <p>The <i>not</i> Operator's Truth Table:</p>
+                <div class="two_col_tab">
+                    <div class="col">
+                        <h3>Expression</h3>
+                        <code>not True</code>
+                        <code>not False</code>
+                    </div>
+                    <div class="col">
+                        <h3>Evaluates to</h3>
+                        <code>False</code>
+                        <code>True</code>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="if_statements">
+                <header>If Statements</header>
+                <h3>if statements</h3>
+                <code>if name == 'Alice': <br> print('Hi, Alice.')</code>
+                <h3>else statements</h3>
+                <code>name = 'Bob' <br>if name == 'Alice': <br>print('Hi, Alice.') <br>
+                    else: <br>print('Hello, stranger.')</code>
+                <h3>elif statements</h3>
+                <code>name = 'Bob' <br>age = 5 <br>if name == 'Alice': <br>print('Hi, Alice.') <br>
+                    elif age < 12: <br> print('You are not Alice, kiddo.')</code>
+            </section>
+
+            <section class="main-section" id="loops">
+                <header>Loops</header>
+                <h3>while Loop statements</h3>
+                <code>spam = 0 <br> while spam < 5: <br> print('Hello, world.') <br> spam = spam + 1</code>
+                <h3>break statements</h3>
+                <p>if the execution reaches a break statement, it immediately exits the while loop's 
+                    clause:
+                </p>
+                <code>while True: <br> print('Please type your name.') <br>name = input() <br>
+                    if name == 'your name': <br>break <br>print('Thank you!')</code>
+                <h3>continue statements</h3>
+                <p>When the program execution reaches a continue statement, the program execution immediately
+                     jumps back to the start of the loop.</p>
+                <code>while True: <br>print('Who are you?') <br>name = input() <br>if name != 'Joe': <br>
+                    continue <br>print('Hello, Joe. What is the password? (It is a fish.)') <br>
+                    password = input() <br>if password == 'swordfish': <br>break <br>print('Access granted.')</code>
+                <h3>for loops</h3>
+                <code>for i in range(5): <br>print('Jimmy Five Times ({})'.format(str(i)))</code>
+            </section>
+
+            <section class="main-section" id="TBD">
+                <header>TBD</header>
+            </section>
+
+            <section class="main-section" id="reference">
+                <header>Reference</header>
+                <li class="ref">All the documentation in this page is taken from 
+                    <a href="https://www.pythoncheatsheet.org/">pythoncheatsheet.org</a></li>
+            </section>
+
         </main>
     </body>
 
